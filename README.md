@@ -1,4 +1,3 @@
-Readme file for sum_harness_instructional
 
 # sum_harness_instructional code harness
 
