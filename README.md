@@ -41,17 +41,17 @@ There are two methods for modifying the compiler optimization level.
 
 Option 1 (best approach): set the CMAKE_CXX_FLAGS_RELEASE environment variable then run cmake
 
-For full optimization:
- bash users:
- % export CMAKE_CXX_FLAGS_RELEASE="-O3"
- csh users:
- % setenv CMAKE_CXX_FLAGS_RELEASE "-O3"
+For full optimization:  
+ bash users:  
+ % export CMAKE_CXX_FLAGS_RELEASE="-O3"  
+ csh users:  
+ % setenv CMAKE_CXX_FLAGS_RELEASE "-O3"  
 
-For no optimization:
- bash users:
- % export CMAKE_CXX_FLAGS_RELEASE="-O0"
- csh users:
- % setenv CMAKE_CXX_FLAGS_RELEASE "-O0"
+For no optimization:  
+ bash users:  
+ % export CMAKE_CXX_FLAGS_RELEASE="-O0"  
+ csh users:  
+ % setenv CMAKE_CXX_FLAGS_RELEASE "-O0"  
 
 
 Option 2 (works but not preferred): uncomment one of the following two lines then run/rerun cmake:
