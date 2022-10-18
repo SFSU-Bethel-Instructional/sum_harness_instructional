@@ -1,0 +1,8 @@
+# author: E. Wes Bethel, Oct 2022
+# sample data for use with the plot_3vars.py file
+Problem Size,code 1,code 2,code 3
+64,0.00044,0.00128,0.00759
+128,0.00061,0.00949,0.05974
+256,0.00236,0.0875,0.20877
+512,0.01201,0.1418,0.89089
+1024,0.07743,0.81365,3.04055

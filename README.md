@@ -89,4 +89,9 @@ or
 
 When you run each code, it will iterate through the set of problem sizes predefined inside benchmark.cpp
 
+# Building and running the codes on Cori@NERSC
+
+Please refer to lecture slides for additional information about accessing Cori, building your code there, and running your code there.
+
+
 # EOF
