@@ -34,7 +34,7 @@ int main(int argc, char** argv)
    int n_problems = problem_sizes.size();
 
    /* For each test size */
-   for (int n : problem_sizes) 
+   for (int64_t n : problem_sizes) 
    {
       printf("Working on problem size N=%d \n", n);
 
