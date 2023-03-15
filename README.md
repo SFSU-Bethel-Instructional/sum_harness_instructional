@@ -22,15 +22,11 @@ You should not need to modify anything inside CMakeLists.txt.
 # Default build instructions:
 
 
-% cd sum_harness_instructional     # contains the source files and CMakeLists.txt file
-
-% mkdir build
-
-% cd build
-
-% cmake ../           # cmake generates lots of output
-
-% make                # to build the programs
+`% cd sum_harness_instructional`     # contains the source files and CMakeLists.txt file
+`% mkdir build`
+`% cd build`
+`% cmake ../`           # cmake generates lots of output
+`% make`                # to build the programs
 
 # Additional build options -- Compiler Optimization Level
 
@@ -79,15 +75,15 @@ You will need to add code in three places:
 
 Once the codes are built, you should be able to just run each one from the command line:
 
-% ./sum_direct
+`% ./sum_direct`
 
 or 
 
-% ./sum_indirect
+`% ./sum_indirect`
 
 or
 
-% ./sum_vector
+`% ./sum_vector`
 
 When you run each code, it will iterate through the set of problem sizes predefined inside benchmark.cpp
 
@@ -103,13 +99,13 @@ Then follow the build instructions above.
 
 Once you have built the codes, you may request interactive access to a Perlmutter CPU node by using this command:
 
-'% salloc --nodes 1 --qos interactive --time 00:30:00 --constraint cpu --account=m3930'
+`% salloc --nodes 1 --qos interactive --time 00:30:00 --constraint cpu --account=m3930`
 
 Once you are on an interactive CPU node, run each of the codes using these commands:
 
-'srun ./sum_direct'
-'srun ./sum_indirect'
-'srun ./sum_vector'
+`srun ./sum_direct`
+`srun ./sum_indirect`
+`srun ./sum_vector`
 
 
 # Building and running the codes on Cori@NERSC (deprected as of March 2023)
