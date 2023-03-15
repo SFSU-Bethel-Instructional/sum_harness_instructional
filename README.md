@@ -108,7 +108,7 @@ Once you are on an interactive CPU node, run each of the codes using these comma
 `srun ./sum_vector`
 
 
-# Building and running the codes on Cori@NERSC (deprected as of March 2023)
+# Building and running the codes on Cori@NERSC (deprecated as of March 2023)
 
 Please refer to lecture slides for additional information about accessing Cori, building your code there, and running your code there.
 
