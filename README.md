@@ -97,7 +97,7 @@ After [logging in to perlmutter at NERSC,](https://docs.nersc.gov/systems/perlmu
 
 Set up your environment to make use of the CPU nodes by typing in this command:
 
-'% module load cpu'
+`% module load cpu`
 
 Then follow the build instructions above.
 
