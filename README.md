@@ -22,11 +22,11 @@ You should not need to modify anything inside CMakeLists.txt.
 # Default build instructions:
 
 
-`% cd sum_harness_instructional`     # contains the source files and CMakeLists.txt file
-`% mkdir build`
-`% cd build`
-`% cmake ../`           # cmake generates lots of output
-`% make`                # to build the programs
+`% cd sum_harness_instructional`     # contains the source files and CMakeLists.txt file  
+`% mkdir build`  
+`% cd build`  
+`% cmake ../`           # cmake generates lots of output   
+`% make`                # to build the programs  
 
 # Additional build options -- Compiler Optimization Level
 
