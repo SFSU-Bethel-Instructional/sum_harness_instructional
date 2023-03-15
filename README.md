@@ -52,6 +52,8 @@ For no optimization:
  csh users:  
  % setenv CMAKE_CXX_FLAGS_RELEASE "-O0"  
 
+ Then, after setting the CMAKE_CXX_FLAGS_RELEASE environment variable, clean your build directory, and rerun cmake and then make.
+
 
 Option 2 (works but not preferred): uncomment one of the following two lines then run/rerun cmake:
 
@@ -60,14 +62,14 @@ For -O3: full optimization
 For -O0: no optimization in gcc/g++
    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O0")
 
-Note: if you modify CMakeLists.txt, you will need to rerun cmake and then rerun make. If you need to rerun cmake, it is best to delete everything in the build directory and start from scratch (\rm -rf).
+After modifying CMakeLists.txt, clean your build directory, and rerun cmake and then make.
 
 
 # Adding your code
 
 You will need to add code in three places:
 
-* Inside benchmark.cpp: please add instrumentation code that will measure and report elapsed time consumed by the call to the sum() routine. Please refer to the chrono_timer code for an example of how to do this kind of time measurement.
+* Inside benchmark.cpp: please add instrumentation code that will measure and report elapsed time consumed by the call to the sum() routine. Please refer to the [chrono_timer code](https://github.com/SFSU-CSC746/chrono_timer) for an example of how to do this kind of time measurement.
 
 * The setup() routine inside each of sum_direct.cpp, sum_indirect.cpp, and sum_vector.cpp. See the homework writeup for details on how to perform initialization for each of these different codes.
 
@@ -89,7 +91,28 @@ or
 
 When you run each code, it will iterate through the set of problem sizes predefined inside benchmark.cpp
 
-# Building and running the codes on Cori@NERSC
+# Building and running the codes on Perlmutter@NERSC
+
+After [logging in to perlmutter at NERSC,](https://docs.nersc.gov/systems/perlmutter/), either pull the code directly from git or [transfer a copy from your local machine to NERSC](https://docs.nersc.gov/services/scp/).
+
+Set up your environment to make use of the CPU nodes by typing in this command:
+
+'% module load cpu'
+
+Then follow the build instructions above.
+
+Once you have built the codes, you may request interactive access to a Perlmutter CPU node by using this command:
+
+'% salloc --nodes 1 --qos interactive --time 00:30:00 --constraint cpu --account=m3930'
+
+Once you are on an interactive CPU node, run each of the codes using these commands:
+
+'srun ./sum_direct'
+'srun ./sum_indirect'
+'srun ./sum_vector'
+
+
+# Building and running the codes on Cori@NERSC (deprected as of March 2023)
 
 Please refer to lecture slides for additional information about accessing Cori, building your code there, and running your code there.
 
