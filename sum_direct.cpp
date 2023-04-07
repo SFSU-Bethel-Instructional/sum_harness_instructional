@@ -26,6 +26,6 @@ sum(int64_t N, uint64_t A[])
       sum += A[i];
    }
 
-   return 0;
+   return sum;
 }
 
