@@ -6,8 +6,6 @@
 #include <vector>
 #include <string.h>
 
-
-
 void 
 setup(int64_t N, uint64_t A[])
 {
@@ -19,6 +17,12 @@ sum(int64_t N, uint64_t A[])
 {
    printf(" inside sum_indirect perform_sum, N=%lld \n", N);
 
-   return 0;
-}
+   int64_t sum = 0;
 
+   for(int64_t i=0; i<N; i++)
+   {
+      sum += A[A[i]];
+   }
+
+   return sum;
+}
