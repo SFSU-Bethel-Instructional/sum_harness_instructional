@@ -42,6 +42,13 @@ xlocs = [i for i in range(len(problem_sizes))]
 
 plt.xticks(xlocs, problem_sizes)
 
+# here, we are plotting the raw values read from the input .csv file, which
+# we interpret as being "time" that maps directly to the y-axis.
+#
+# what if we want to plot MFLOPS instead? How do we compute MFLOPS from
+# time and problem size? You may need to add some code here to compute
+# MFLOPS, then modify the plt.plot() lines below to plot MFLOPS rather than time.
+
 plt.plot(code1_time, "r-o")
 plt.plot(code2_time, "b-x")
 plt.plot(code3_time, "g-^")
