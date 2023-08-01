@@ -34,7 +34,7 @@ int main(int argc, char** argv)
    /* For each test size */
    for (int64_t n : problem_sizes) 
    {
-      printf("Working on problem size N=%d \n", n);
+      printf("Working on problem size N=%lld \n", n);
 
       // invoke user code to set up the problem
       setup(n, &A[0]);
