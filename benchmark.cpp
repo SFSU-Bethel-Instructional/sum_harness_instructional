@@ -1,5 +1,5 @@
 //
-// (C) 2022, E. Wes Bethel
+// (C) 2022-2023, E. Wes Bethel
 // benchmark-* harness for running different versions of the sum study
 //    over different problem sizes
 //
