@@ -93,7 +93,7 @@ Once you are on an interactive CPU node, run each of the codes using these comma
 
 By default, the CMakeLists.txt will do a "Release" build, which means there will be full compiler optimizations.
 
-There are two methods for modifying the compiler optimization level.
+If need be, there are two methods for modifying the compiler optimization level.
 
 Option 1 (best approach): set the CMAKE_CXX_FLAGS_RELEASE environment variable then run cmake
 
