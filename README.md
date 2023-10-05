@@ -38,37 +38,6 @@ To build and run this code, you need to have the following software tools instal
 `% cmake ../`           # cmake generates lots of output   
 `% make`                # to build the programs  
 
-# Additional build options -- Compiler Optimization Level
-
-By default, the CMakeLists.txt will do a "Release" build, which means there will be full compiler optimizations.
-
-There are two methods for modifying the compiler optimization level.
-
-Option 1 (best approach): set the CMAKE_CXX_FLAGS_RELEASE environment variable then run cmake
-
-For full optimization:  
- bash users:  
- % export CMAKE_CXX_FLAGS_RELEASE="-O3"  
- csh users:  
- % setenv CMAKE_CXX_FLAGS_RELEASE "-O3"  
-
-For no optimization:  
- bash users:  
- % export CMAKE_CXX_FLAGS_RELEASE="-O0"  
- csh users:  
- % setenv CMAKE_CXX_FLAGS_RELEASE "-O0"  
-
- Then, after setting the CMAKE_CXX_FLAGS_RELEASE environment variable, clean your build directory, and rerun cmake and then make.
-
-
-Option 2 (works but not preferred): uncomment one of the following two lines then run/rerun cmake:
-
-For -O3: full optimization 
-   set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
-For -O0: no optimization in gcc/g++
-   set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O0")
-
-After modifying CMakeLists.txt, clean your build directory, and rerun cmake and then make.
 
 
 # Adding your code
@@ -120,9 +89,37 @@ Once you are on an interactive CPU node, run each of the codes using these comma
 `srun ./sum_vector`
 
 
-# Building and running the codes on Cori@NERSC (deprecated as of March 2023)
+# Additional build options -- Compiler Optimization Level
 
-Please refer to lecture slides for additional information about accessing Perlmutter@NERSC, building your code there, and running your code there.
+By default, the CMakeLists.txt will do a "Release" build, which means there will be full compiler optimizations.
+
+There are two methods for modifying the compiler optimization level.
+
+Option 1 (best approach): set the CMAKE_CXX_FLAGS_RELEASE environment variable then run cmake
+
+For full optimization:  
+ bash users:  
+ % export CMAKE_CXX_FLAGS_RELEASE="-O3"  
+ csh users:  
+ % setenv CMAKE_CXX_FLAGS_RELEASE "-O3"  
+
+For no optimization:  
+ bash users:  
+ % export CMAKE_CXX_FLAGS_RELEASE="-O0"  
+ csh users:  
+ % setenv CMAKE_CXX_FLAGS_RELEASE "-O0"  
+
+ Then, after setting the CMAKE_CXX_FLAGS_RELEASE environment variable, clean your build directory, and rerun cmake and then make.
+
+
+Option 2 (works but not preferred): uncomment one of the following two lines then run/rerun cmake:
+
+For -O3: full optimization 
+   set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
+For -O0: no optimization in gcc/g++
+   set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O0")
+
+After modifying CMakeLists.txt, clean your build directory, and rerun cmake and then make.
 
 
 # EOF
