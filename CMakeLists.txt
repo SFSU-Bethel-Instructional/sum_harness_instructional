@@ -5,6 +5,7 @@ cmake_minimum_required( VERSION 3.5)
 project (sum_harness_instructional LANGUAGES CXX)
 
 set(CMAKE_BUILD_TYPE "Release")
+
 #set(CMAKE_CXX_FLAGS "-Wall")  # uncomment this line to turn on compiler warnings
 
 # info for setting the compiler optimization level
@@ -29,7 +30,7 @@ set(CMAKE_BUILD_TYPE "Release")
 # -O3 is full optimization in gcc/g++
 #set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 # -O0 is no optimization in gcc/g++
-#set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O0")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O0")
 
 
 #
